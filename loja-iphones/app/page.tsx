@@ -108,25 +108,32 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ÁREA DE ESCOLHA (Flex-col no mobile) */}
+    {/* ÁREA DE ESCOLHA (Flex-col no mobile) */}
       <main id="categorias" className="w-full max-w-[1000px] mx-auto flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 px-4 relative z-10 scroll-mt-32">
         
         {/* === CARD 1: SEMINOVOS === */}
         <Link href="/categoria/seminovos" className="group relative w-[250px] h-[420px] bg-black rounded-[40px] border-[6px] border-[#1e293b] ring-1 ring-white/10 hover:ring-cyan-400 hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-cyan-900/20 overflow-hidden">
           
+          {/* Decoração Dynamic Island */}
           <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-20 pointer-events-none flex items-center justify-center">
              <div className="w-12 h-1.5 bg-slate-900 rounded-full"></div>
           </div>
 
+          {/* Fundo Gradiente Padrão */}
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-black z-0" />
 
-          <img
-            src="/SEGURANDO_IPHONE.jpeg"
-            alt="Fundo Seminovos"
-            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition duration-700 z-0 mix-blend-overlay"
-          />
+          {/* --- MUDANÇA AQUI: Imagem de fundo removida --- */}
 
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 p-5 z-10 text-center bg-gradient-to-t from-black via-transparent to-transparent">
+          {/* Conteúdo do Card */}
+          <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 p-5 z-10 text-center bg-gradient-to-t from-black via-transparent to-transparent space-y-1">
+            
+            {/* --- NOVA LOGO EM DESTAQUE --- */}
+            <img
+                src="/imagens/logo_sem_fundo.png"
+                alt="Logo Seminovos"
+                className="w-50 h-50 object-contain mb-2 group-hover:scale-110 transition duration-500 drop-shadow-[0_0_10px_rgba(6,182,212,0.3)]"
+            />
+
             <h2 className="text-2xl font-black text-white uppercase italic tracking-tighter mb-1">
               Semi<span className="text-cyan-400">Novos</span>
             </h2>
@@ -148,19 +155,27 @@ export default function Home() {
         {/* === CARD 2: NOVOS === */}
         <Link href="/categoria/novos" className="group relative w-[250px] h-[420px] bg-black rounded-[40px] border-[6px] border-[#1e293b] ring-1 ring-white/10 hover:ring-blue-500 hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-blue-900/20 overflow-hidden">
           
+          {/* Decoração Dynamic Island */}
           <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-20 pointer-events-none flex items-center justify-center">
             <div className="w-12 h-1.5 bg-slate-900 rounded-full"></div>
           </div>
 
+          {/* Fundo Gradiente Padrão */}
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-black z-0" />
 
-          <img
-            src="/02_IPHONES.jpeg"
-            alt="Fundo Novos"
-            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition duration-700 z-0 mix-blend-overlay"
-          />
+          {/* --- MUDANÇA AQUI: Imagem de fundo removida --- */}
 
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 p-5 z-10 text-center bg-gradient-to-t from-black via-transparent to-transparent">
+          {/* Conteúdo do Card */}
+          <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 p-5 z-10 text-center bg-gradient-to-t from-black via-transparent to-transparent space-y-1">
+             
+            {/* --- NOVA LOGO EM DESTAQUE --- */}
+             <img
+                src="/imagens/logo_sem_fundo.png"
+                alt="Logo Novos"
+                // Note que no card azul, adicionei uma sombra azul na logo
+                className="w-50 h-50 object-contain mb-2 group-hover:scale-110 transition duration-500 drop-shadow-[0_0_10px_rgba(37,99,235,0.3)]"
+            />
+
             <h2 className="text-2xl font-black text-white uppercase italic tracking-tighter mb-1">
               Lacra<span className="text-blue-500">dos</span>
             </h2>
